@@ -28,7 +28,7 @@ ARG BUILD_ENV=qa
 
 ENV BUILD_ENV=${BUILD_ENV}
 ENV MEMEFACTORY_ENV=${BUILD_ENV}
-ENV CONFIG /configs/meme.config.edn
+ENV CONFIG /configs/meme.config.qa.edn
 
 WORKDIR /memefactory
 

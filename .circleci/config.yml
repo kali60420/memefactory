@@ -117,28 +117,28 @@ jobs:
          channel: travis-ci
          mentions: $CIRCLE_USERNAME
 
-workflows:
-  version: 2
-  build_and_deploy:
-    jobs:
-      - test:
-          context: district0x
-      - check_migrations:
-          context: district0x
-          requires:
-            - test
-          filters:
-            branches:
-              only:
-                - master
-                - production
-      - build_and_deploy:
-          context: district0x
-          requires:
-            - test
-            - check_migrations
-          filters:
-            branches:
-              only:
-                - master
-                - production
+#workflows:
+#  version: 2
+#  build_and_deploy:
+#    jobs:
+#      - test:
+#          context: district0x
+#      - check_migrations:
+#          context: district0x
+#          requires:
+#            - test
+#          filters:
+#            branches:
+#              only:
+#                - master
+#                - production
+#      - build_and_deploy:
+#          context: district0x
+#          requires:
+#            - test
+#            - check_migrations
+#          filters:
+#            branches:
+#              only:
+#                - master
+#                - production
